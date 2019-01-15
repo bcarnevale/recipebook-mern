@@ -13,7 +13,6 @@ const ReceipeSchema = new Schema ({
       name: String
     }],
     method: [{
-      step: Number,
       description: String
     }]
 })
