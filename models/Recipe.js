@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
 
-const ReceipeSchema = new Schema ({
+const RecipeSchema = new mongoose.Schema ({
+    id: Number,
     title: String,
     prepTime: Number,
     cookTime: Number,
     difficulty: String,
     type: String,
-	serves: Number,
-	cuisine: String,
+    serves: Number,
+    cuisine: String,
     ingredients: [{
       quantity: String,
       name: String
@@ -17,4 +18,4 @@ const ReceipeSchema = new Schema ({
     }]
 })
 
-module.exports = mongoose.model('Recipe', ReceipeSchema)
+module.exports = mongoose.model('Recipe', RecipeSchema)
