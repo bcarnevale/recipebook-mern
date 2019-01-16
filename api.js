@@ -101,6 +101,12 @@ app.put('/:id', (req, res) => {
     .then(doc => res.send(doc));
 })
 
+app.delete('/:id', (req, res) => {
+    const id = req.params._id
+    Recipe.findOneAndRemove({ id })
+        .then(doc => res.send(doc))
+})
+
 app.listen(port, () => {
     console.log(`listening on port ${port}`)
 })
